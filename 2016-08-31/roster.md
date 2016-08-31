@@ -1,8 +1,5 @@
 # Roster
-
-<<<<<<< HEAD
 Kaz Gofron
-=======
 Xiaojing Huang
 Thomas Caswell
 Dan Allan
