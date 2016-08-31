@@ -1,5 +1,4 @@
 # Roster
-modified!
 
 Andi Barbour
 Bruno Luvizotto
@@ -14,4 +13,3 @@ Claudio Mazzoli
 Maksim Rakitin
 Wen Hu
 Bruno Luvizotto
-
