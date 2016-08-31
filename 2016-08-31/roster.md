@@ -1,4 +1,6 @@
 # Roster
+modified!
+
 Andi Barbour
 Bruno Luvizotto
 Kaz Gofron
@@ -10,5 +12,6 @@ Oksana Ivashkevych
 Andrei Fluerasu
 Claudio Mazzoli
 Maksim Rakitin
+Wen Hu
 Bruno Luvizotto
 
