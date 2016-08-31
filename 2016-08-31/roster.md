@@ -13,3 +13,5 @@ Andrei Fluerasu
 Claudio Mazzoli
 Maksim Rakitin
 Wen Hu
+Bruno Luvizotto
+
