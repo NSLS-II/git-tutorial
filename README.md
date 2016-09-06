@@ -1,7 +1,5 @@
 # git-tutorial
 
-DAN WUZ HERE.
-
 A sandbox for learning how to use git / github / gitflow
 
  - [software carpentry lesson material](https://swcarpentry.github.io/git-novice/)
