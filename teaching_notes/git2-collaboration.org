@@ -1,0 +1,37 @@
+* prep for git-2 tutorial
+** 01 - intro/philosophy
+ - git is a DAG
+ - there are many copies of the DAG
+ - grow DAG by hack-add-commit cycle
+ - publish DAG to world by push
+ - get changes from the rest of the world via pull/fetch-merge
+ - branches <-> bookmarks
+ - talk though what single-repo-push-to-master workflow looks like
+ - this makes heavy use of a white board
+*
+** 02 - setup
+ - note on my prompt https://github.com/magicmonty/bash-git-prompt
+ - quickly re-cover sections 1, 2, 3, 7 from git 1
+ - $ git remote rename origin my_user_name
+
+** 03 - github flow
+$ git log
+$ git checkout -b notes_on_venus
+$ git log
+$ git branch
+$ gitk --all
+$ vi venus.txt
+$ git add venus.txt
+$ git commit -m 'notes on venus'
+$ ls
+$ git checkout master
+$ ls
+$ gitk --all
+$ git checkout notes_on_venus
+$ git push tacaswell notes_on_venus
+
+ - go to GH API and show PR cycle
+
+$ git checkout master
+$ git pull
+$ git branch -d notes_on_venus

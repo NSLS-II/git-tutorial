@@ -1,0 +1,140 @@
+* git tutorial
+
+https://swcarpentry.github.io/git-novice/
+
+** 01-basic
+git- we are using git + github on your beamlines and for DAMA
+   development
+ - VCS stores 'snapshots' of your work
+ - there are 'diffs' between versions
+ - can think about diffs independently of versions
+ - git automates the boring parts of foo_1.py, foo_2.py, ...
+ - useful for individual work (infinite rollback, moving between computers)
+ - useful for collaboration (tools to manage and track changes)
+
+
+** 02-setup
+
+ - I assume you all came with git installed
+ - use your BNL email
+ - do not do this on the BL computers or you may end up 'owning' code
+   you never saw
+
+$ git config --list
+$ git config --global user.name "Vlad Dracula"
+$ git config --global user.email "vlad@tran.sylvan.ia"
+$ git config --global color.ui "auto"
+$ git config --global
+$ git config --list
+
+
+
+** 03-create
+$ mkdir planets
+$ cd planets
+$ ls
+$ git init
+$ ls
+$ ls -la
+
+
+** 04-tracking
+
+*** basic tracking commands
+$ vi mars.txt
+$ ls
+$ cat mars.txt
+$ git status
+$ git add mars.txt
+$ git status
+$ git commit -m 'notes on mars base'
+$ git status
+$ git log
+$ vi mars.txt
+$ cat mars.txt
+$ git status
+$ git diff
+$ git commit -m 'this will not work'
+$ git add mars.txt
+$ git commit -m 'this will works
+$ vi mars.txt
+$ git diff
+$ git add mars.txt
+$ git diff
+$ git diff --staged
+$ vi mars.txt
+$ git add mars.txt
+$ git commit
+$ git status
+$ git log
+
+*** notes about picking a commit message
+ - like an email
+ - terse but understandable header
+ - as verbose as needed body
+ - these are notes to your future self
+ - Always wanted to travel back in time to try fighting a younger
+   version of yourself? Software development is the career for you!
+   @Loh
+
+** 05 exploring history
+$ vi mars.txt
+$ git diff HEAD mars.txt
+$ git diff HEAD~1 mars.txt
+$ git diff HEAD~2 mars.txt
+$ git diff f22b25e3233b4645dabd0d81e651fe074bd8e73b mars.txt
+$ vi mars.txt
+
+$ git checkout HEAD mars.txt
+
+$ git checkout f22b25e mars.txt
+$ git checkout -- <file>
+
+** 06 ignoring things
+ - controlled by .gitignore config file
+ - takes globs
+ - we will skip in interest of spending more time on
+   collaborative workflows
+
+** 07 remotes on github
+walk through really creating one on GH
+
+$ git remote add REMOTE_NAME https://github.com/username/planets.git
+$ git remote -v
+$ git push REMOTE_NAME master
+
+$ git add
+$ git commit -m 'foo'
+$ git push tacaswell master
+
+** 08 single-repo collaboration
+
+$ git clone https://github.com/nsls-ii/git-tutorial.git
+$ cd git-tutorial
+$ git remote -v
+$ git remote rename origin nsls-ii
+$ vi 2016-08-31/tacaswell.txt
+$ git add
+$ git commit
+$ git push nsls-ii master
+$ # have dan do the same
+$ git pull
+$ git log
+$ # look at gitk
+$ # have both of us edit and commit, dan pushes first
+$ git push
+$ git pull
+$ git log
+$ # look at gitk
+$ git push
+
+# create pandemonium by having 30 do this at once
+
+** 09 conflicts
+$ # add my name to raster
+$ git add
+$ git commit
+$ # have dan do the same and push first
+$ git push nsls-ii master
+$ git pull
+$ # discuss merge confilcts
